@@ -12,9 +12,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JavaFXStagesScenes/src/main/java/stages_scenes/HelloWorld.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../JavaFXStagesScenes/src/main/java/stages_scenes/Storybook.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleProgramMackenzieLarson/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java" afterPath="$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/launch/Launcher.java" afterPath="$PROJECT_DIR$/src/main/java/launch/Launcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assn1/src/main/java/HelloWorld.java" afterPath="$PROJECT_DIR$/../assn1/src/main/java/HelloWorld.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,25 +37,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="320">
+              <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
               <folding>
+                <element signature="e#0#478#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#152#153#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculatorUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculatorUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5089">
-              <caret line="162" column="58" lean-forward="true" selection-start-line="162" selection-start-column="58" selection-end-line="162" selection-end-column="58" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
               <folding>
                 <element signature="e#0#5374#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -89,11 +89,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/launch/Launcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/stylesheet.css" />
         <option value="$PROJECT_DIR$/src/main/stylesheet.css" />
         <option value="$PROJECT_DIR$/src/calcStyles.css" />
         <option value="$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/launch/Launcher.java" />
       </list>
     </option>
   </component>
@@ -318,7 +318,7 @@
       <option name="presentableId" value="Default" />
       <updated>1507058632632</updated>
       <workItem from="1507058636175" duration="2899000" />
-      <workItem from="1507222505421" duration="19501000" />
+      <workItem from="1507222505421" duration="19697000" />
     </task>
     <task id="LOCAL-00001" summary="Added calculator buttons">
       <created>1507060840884</created>
@@ -334,11 +334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507320887240</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Javadocs">
+      <created>1507322895358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507322895358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22400000" />
+    <option name="totallyTimeSpent" value="22596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -381,7 +388,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added calculator buttons" />
     <MESSAGE value="Aligned buttons according to instructions. Styled buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned buttons according to instructions. Styled buttons." />
+    <MESSAGE value="Added Javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Javadocs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -401,9 +409,10 @@
         <state relative-caret-position="240">
           <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
+            <element signature="e#0#478#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -431,18 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -480,11 +477,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/CalculatorUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5089">
-          <caret line="162" column="58" lean-forward="true" selection-start-line="162" selection-start-column="58" selection-end-line="162" selection-end-column="58" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
           <folding>
             <element signature="e#0#5374#0" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/launch/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#478#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
           </folding>
         </state>
       </provider>
