@@ -1,3 +1,10 @@
+/*
+ * Mackenzie Larson
+ * 10/6/2017
+ * Calculator App Part 1
+ * CalculatorUI.java
+ */
+
 package ui;
 
 import javafx.application.Application;
@@ -12,8 +19,22 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ * CalculatorUI.java
+ *
+ * The UI for a calculator application
+ */
 public class CalculatorUI extends Application
 {
+    private static final int BUTTON_HEIGHT = 25;
+    private static final int BUTTON_WIDTH = 26;
+
+    /**
+     * Constructor to set up the application
+     * @param stage holds the application
+     */
     @Override
     public void start(Stage stage)
     {
@@ -22,6 +43,10 @@ public class CalculatorUI extends Application
         stage.show();
     }
 
+    /**
+     * Builds the calculator, adds buttons to GridPane
+     * @return Scene contains the grid pane of buttons
+     */
     private Scene assemble()
     {
         GridPane gridPane = new GridPane();
@@ -32,21 +57,21 @@ public class CalculatorUI extends Application
         gridPane.setAlignment(Pos.CENTER); // center calculator on screen
 
         // creating calculator buttons
-        Button num1 = createNumberButton("1", "#DF01D7");
-        Button num2 = createNumberButton("2", "#A901DB");
-        Button num3 = createNumberButton("3", "#7401DF");
-        Button num4 = createNumberButton("4", "#B404AE");
-        Button num5 = createNumberButton("5", "#8904B1");
-        Button num6 = createNumberButton("6", "#5F04B4");
-        Button num7 = createNumberButton("7", "#8A0868");
-        Button num8 = createNumberButton("8", "#6A0888");
-        Button num9 = createNumberButton("9", "#4B088A");
-        Button num0 = createNumberButton("0", "#FF00FF");
+        Button num1 = createButton("1", "#DF01D7");
+        Button num2 = createButton("2", "#A901DB");
+        Button num3 = createButton("3", "#7401DF");
+        Button num4 = createButton("4", "#B404AE");
+        Button num5 = createButton("5", "#8904B1");
+        Button num6 = createButton("6", "#5F04B4");
+        Button num7 = createButton("7", "#8A0868");
+        Button num8 = createButton("8", "#6A0888");
+        Button num9 = createButton("9", "#4B088A");
+        Button num0 = createButton("0", "#FF00FF");
 
-        Button add = createNumberButton("+", "#9A2EFE");
-        Button subtract = createNumberButton("-", "#9A2EFE");
-        Button multiply = createNumberButton("*", "#9A2EFE");
-        Button divide = createNumberButton("/", "#9A2EFE");
+        Button add = createButton("+", "#9A2EFE");
+        Button subtract = createButton("-", "#9A2EFE");
+        Button multiply = createButton("*", "#9A2EFE");
+        Button divide = createButton("/", "#9A2EFE");
 
         Button enter = createEnterButton("Enter", 25, 62, "#BE81F7");
 
@@ -55,8 +80,8 @@ public class CalculatorUI extends Application
         output.setAlignment(Pos.CENTER_RIGHT);
         output.setStyle("-fx-border-width: 3px; " +
                 "-fx-border-color: #BE81F7; " +
-                "-fx-background-color: white; ");
-        output.setPadding(new Insets(0,5,0,0));
+                "-fx-background-color: white; "); // sets border and color
+        output.setPadding(new Insets(0,5,0,0)); // shifts text slightly left
         output.getChildren().addAll(new Label("74"));
 
         // adding first row of buttons: 7 8 9 +
@@ -88,15 +113,23 @@ public class CalculatorUI extends Application
         return new Scene(gridPane, 240, 200);
     }
 
-    public Button createNumberButton(String text, String color)
+    /**
+     * Creates a button
+     * Sets the text, size, color, and color change on click
+     * @param text text that will appear on button
+     * @param color color that the button will turn on click
+     * @return Button the calculator button
+     */
+    public Button createButton(String text, String color)
     {
         Button button = new Button();
 
         button.setText(text);
-        button.setPrefHeight(25); // size of button
-        button.setPrefWidth(26); // size of button
+        button.setPrefHeight(BUTTON_HEIGHT);
+        button.setPrefWidth(BUTTON_WIDTH);
         button.setStyle("-fx-background-color: #AC58FA");
 
+        // changes buttons color on click
         button.setOnAction(new EventHandler<ActionEvent>()
         {
             @Override
@@ -109,15 +142,24 @@ public class CalculatorUI extends Application
         return button;
     }
 
+    /**
+     * Creates the Enter button and its attributes
+     * @param text text on button
+     * @param height height of button
+     * @param width width of button
+     * @param color color of button
+     * @return Button the created button
+     */
     public Button createEnterButton(String text, int height, int width, String color)
     {
         Button button = new Button();
 
         button.setText(text);
-        button.setPrefHeight(height); // size of button
-        button.setPrefWidth(width); // size of button
+        button.setPrefHeight(height);
+        button.setPrefWidth(width);
         button.setStyle("-fx-background-color:"+color);
 
+        // changes text color of button on click
         button.setOnAction(new EventHandler<ActionEvent>()
         {
             @Override
