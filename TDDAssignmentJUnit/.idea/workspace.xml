@@ -23,19 +23,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TDDAssignment/src/Cell.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TDDAssignment/src/GameBoard.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TDDAssignment/src/GameBoardTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TDDAssignmentJUnit.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Cell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GameBoard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GameBoardTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Triangle/.idea/compiler.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Triangle/.idea/libraries/Maven__junit_junit_4_12.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Triangle/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
@@ -49,6 +37,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Triangle/src/test/java/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CalcularAppMackenzieLarson/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CalcularAppMackenzieLarson/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Layouts/src/main/java/launcher/Launcher.java" afterPath="$PROJECT_DIR$/../Layouts/src/main/java/launcher/Launcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../assn1/src/main/java/HelloWorld.java" afterPath="$PROJECT_DIR$/../assn1/src/main/java/HelloWorld.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -89,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -149,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/main/java/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/main/java/Cell.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameBoardTest.java" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -330,12 +320,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508784031262</updated>
-      <workItem from="1508784034480" duration="721000" />
+      <workItem from="1508784034480" duration="757000" />
     </task>
+    <task id="LOCAL-00001" summary="first test failed">
+      <created>1508784774148</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1508784774149</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="721000" />
+    <option name="totallyTimeSpent" value="757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -373,6 +371,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first test failed" />
+    <option name="LAST_COMMIT_MESSAGE" value="first test failed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -427,7 +429,7 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
