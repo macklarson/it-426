@@ -1,3 +1,8 @@
+/* Mackenzie Larson
+    11/17/2017
+    PartsDatabaseUI.java
+ */
+
 package gui;
 
 import io.IExporter;
@@ -148,8 +153,13 @@ public class PartsDatabaseUI extends Application
         {
             public void handle(ActionEvent event)
             {
-                // stores the part internally in the application
-                //data.addPart(new CarPart(partId.getText(), manufacturer.getText(), Double.parseDouble(listPrice.getText())), categories.getText());
+                String[] allCategories = categories.getText().split(",");
+                CarPart part = new CarPart(partId.getText(), manufacturer.getText(),
+                        Double.parseDouble(listPrice.getText()), allCategories);
+
+                //System.out.println(part);
+
+                data.addPart(part);
             }
         });
 
@@ -204,17 +214,17 @@ public class PartsDatabaseUI extends Application
                     if (exportChoice[i].equals("Java"))
                     {
                         exporter = new JavaExporter();
-                        exporter.exportParts();
+                        exporter.exportParts(data);
                     }
                     else if (exportChoice[i].equals("JSON"))
                     {
                         exporter = new JSONExporter();
-                        exporter.exportParts();
+                        //exporter.exportParts();
                     }
                     else if (exportChoice[i].equals("XML"))
                     {
                         exporter = new XMLExporter();
-                        exporter.exportParts();
+                        //exporter.exportParts();
                     }
                 }
             }
