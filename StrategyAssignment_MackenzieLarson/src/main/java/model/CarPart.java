@@ -22,7 +22,6 @@ public class CarPart implements Serializable
     private String manufacturer;
     private double listPrice;
     private String[] categories;
-    private JavaImporter importer = new JavaImporter();
 
     public CarPart()
     {

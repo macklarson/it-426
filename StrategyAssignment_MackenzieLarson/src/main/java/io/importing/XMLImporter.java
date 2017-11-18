@@ -7,6 +7,7 @@
 package io.importing;
 
 import io.IImporter;
+import model.PartsDatabase;
 
 /**
  * Imports a java object with XML
@@ -23,7 +24,7 @@ public class XMLImporter implements IImporter
      * @return true if imported successfully
      */
     @Override
-    public boolean importParts()
+    public boolean importParts(PartsDatabase database)
     {
         return false;
     }

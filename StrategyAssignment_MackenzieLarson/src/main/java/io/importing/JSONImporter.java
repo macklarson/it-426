@@ -7,6 +7,8 @@
 package io.importing;
 
 import io.IImporter;
+import model.PartsDatabase;
+import netscape.security.ParameterizedTarget;
 
 /**
  * Writes a java object with JSON
@@ -22,7 +24,7 @@ public class JSONImporter implements IImporter
      * @return true if imported successfully
      */
     @Override
-    public boolean importParts()
+    public boolean importParts(PartsDatabase database)
     {
         return false;
     }

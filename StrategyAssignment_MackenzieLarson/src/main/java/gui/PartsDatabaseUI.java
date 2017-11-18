@@ -219,7 +219,7 @@ public class PartsDatabaseUI extends Application
                     else if (exportChoice[i].equals("JSON"))
                     {
                         exporter = new JSONExporter();
-                        //exporter.exportParts();
+                        exporter.exportParts(data);
                     }
                     else if (exportChoice[i].equals("XML"))
                     {
@@ -256,17 +256,17 @@ public class PartsDatabaseUI extends Application
                     if (importChoice[i].equals("Java"))
                     {
                         importer = new JavaImporter();
-                        importer.importParts();
+                        importer.importParts(data);
                     }
                     else if (importChoice[i].equals("JSON"))
                     {
                         importer = new JSONImporter();
-                        importer.importParts();
+                        importer.importParts(data);
                     }
                     else if (importChoice[i].equals("XML"))
                     {
                         importer = new XMLImporter();
-                        importer.importParts();
+                        //importer.importParts();
                     }
                 }
             }

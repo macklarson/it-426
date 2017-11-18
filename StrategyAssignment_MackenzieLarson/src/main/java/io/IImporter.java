@@ -6,6 +6,8 @@
 
 package io;
 
+import model.PartsDatabase;
+
 /**
  * Imports all CarPart objects from a text file to the application
  *
@@ -20,5 +22,5 @@ public interface IImporter
      * @param database stores a car part object
      * @return  false if the file does not exist or is empty, otherwise true.
      */
-    public boolean importParts();
+    public boolean importParts(PartsDatabase database);
 }

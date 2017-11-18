@@ -21,8 +21,6 @@ import java.util.Iterator;
  */
 public class JavaExporter implements IExporter
 {
-//    PartsDatabase data;
-   CarPart[] parts;
     Iterator<CarPart> iterator;
 
     /**
@@ -37,27 +35,16 @@ public class JavaExporter implements IExporter
         try {
             FileOutputStream fileOut = new FileOutputStream(new File("files/parts.dat"));
             ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
-            parts = database.getParts().toArray(new CarPart[0]);
 
             Collection<CarPart> parts = database.getParts();
 
             iterator = parts.iterator();
 
-            // while loop
             while (iterator.hasNext())
             {
-                //System.out.println("value= " + iterator.next());
-                objOut.writeObject(parts);
+                CarPart carPart = iterator.next();
+                objOut.writeObject(carPart);
             }
-
-            //objOut.writeObject(parts);
-
-
-            //            for (int i = 0; i < parts.length; i++)
-            //            {
-            //                //System.out.println(parts[i]);
-            //                objOut.writeObject(parts[i]);
-            //            }
 
             objOut.close();
             fileOut.close();
