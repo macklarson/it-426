@@ -6,6 +6,8 @@
 
 package model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -17,6 +19,7 @@ import java.util.Iterator;
  * @author Mackenzie Larson
  * @version 1.0
  */
+@XmlRootElement
 public class PartsDatabase
 {
     private Collection<CarPart> parts;
@@ -42,9 +45,10 @@ public class PartsDatabase
      * Returns the entire list of parts and it's information
      * @return list of car parts
      */
+    @XmlElement
     public Collection<CarPart> getParts()
     {
-        return Collections.unmodifiableCollection(parts);
+        return parts;
     }
 
     /**

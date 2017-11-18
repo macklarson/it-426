@@ -8,6 +8,8 @@ package model;
 
 import io.importing.JavaImporter;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.*;
 
 /**
@@ -16,6 +18,7 @@ import java.io.*;
  * @author Mackenzie Larson
  * @verion 1.0
  */
+@XmlRootElement
 public class CarPart implements Serializable
 {
     private String id;
@@ -47,6 +50,7 @@ public class CarPart implements Serializable
      * Retrieves car part ID
      * @return car part ID
      */
+    @XmlElement
     public String getId()
     {
         return id;
@@ -56,6 +60,7 @@ public class CarPart implements Serializable
      * Retrieves car part manufacturer
      * @return car part manufacturer
      */
+    @XmlElement
     public String getManufacturer()
     {
         return manufacturer;
@@ -65,6 +70,7 @@ public class CarPart implements Serializable
      * Retrieves price of part
      * @return price of part
      */
+    @XmlElement
     public double getListPrice()
     {
         return listPrice;
@@ -74,6 +80,7 @@ public class CarPart implements Serializable
      * Retrieves list of categories
      * @return list of categories
      */
+    @XmlElement
     public String[] getCategories()
     {
         return categories;

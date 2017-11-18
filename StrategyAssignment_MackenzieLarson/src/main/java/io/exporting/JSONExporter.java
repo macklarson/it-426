@@ -6,6 +6,7 @@
 package io.exporting;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.IExporter;
 import model.CarPart;
 import model.PartsDatabase;
@@ -33,12 +34,12 @@ public class JSONExporter implements IExporter
     @Override
     public boolean exportParts(PartsDatabase database)
     {
-        Collection<CarPart> parts = database.getParts();
-
-        Gson gson = new Gson();
-        String json = gson.toJson(parts);
-
         try (FileWriter writer = new FileWriter("files/parts.json")) {
+
+            Collection<CarPart> parts = database.getParts();
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            String json = gson.toJson(parts);
 
             gson.toJson(parts, writer);
 

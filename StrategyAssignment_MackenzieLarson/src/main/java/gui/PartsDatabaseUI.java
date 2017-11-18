@@ -224,7 +224,7 @@ public class PartsDatabaseUI extends Application
                     else if (exportChoice[i].equals("XML"))
                     {
                         exporter = new XMLExporter();
-                        //exporter.exportParts();
+                        exporter.exportParts(data);
                     }
                 }
             }
@@ -266,7 +266,7 @@ public class PartsDatabaseUI extends Application
                     else if (importChoice[i].equals("XML"))
                     {
                         importer = new XMLImporter();
-                        //importer.importParts();
+                        importer.importParts(data);
                     }
                 }
             }

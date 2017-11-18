@@ -1,1 +1,18 @@
-[{"id":"678","manufacturer":"Honda","listPrice":100.0,"categories":["Lights"]}]
+[
+  {
+    "id": "123",
+    "manufacturer": "Honda",
+    "listPrice": 454.0,
+    "categories": [
+      "Tires"
+    ]
+  },
+  {
+    "id": "456",
+    "manufacturer": "Toyota",
+    "listPrice": 100.0,
+    "categories": [
+      "Brakes"
+    ]
+  }
+]

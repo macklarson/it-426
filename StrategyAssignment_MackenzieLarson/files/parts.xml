@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<partsDatabase>
+    <parts>
+        <categories>Tires</categories>
+        <id>123</id>
+        <listPrice>454.0</listPrice>
+        <manufacturer>Honda</manufacturer>
+    </parts>
+    <parts>
+        <categories>Brakes</categories>
+        <id>456</id>
+        <listPrice>100.0</listPrice>
+        <manufacturer>Toyota</manufacturer>
+    </parts>
+    <parts>
+        <categories>Lights</categories>
+        <id>678</id>
+        <listPrice>45.0</listPrice>
+        <manufacturer>Hyundai</manufacturer>
+    </parts>
+</partsDatabase>
