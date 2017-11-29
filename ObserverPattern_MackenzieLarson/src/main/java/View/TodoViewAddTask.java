@@ -46,15 +46,17 @@ public class TodoViewAddTask
             @Override
             public void handle(ActionEvent event)
             {
-                //task.addTask(input.getText());
+                if(!newTask.getText().equals(""))
+                {
+                    TodoController.addTask(newTask.getText());
+                }
+
                 TodoController.switchScenes(finish.getText());
             }
         });
-
 
         box.getChildren().addAll(title, newTask, finish);
 
         return new Scene(box, WIN_WIDTH, WIN_HEIGHT);
     }
-
 }

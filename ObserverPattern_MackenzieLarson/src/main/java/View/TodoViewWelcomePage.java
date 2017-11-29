@@ -16,13 +16,29 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class TodoViewWelcomePage
+public class TodoViewWelcomePage extends Application
 {
     private static final int WIN_WIDTH = 300;
     private static final int WIN_HEIGHT = 300;
     private static final int BTN_WIDTH = 90;
     public static final int PANEL_PADING = 10;
     public static Stage stage;
+    private TodoController controller;
+
+    public static Stage getStage()
+    {
+        return stage;
+    }
+
+    @Override
+    public void start(Stage theStage)
+    {
+        controller = new TodoController();
+        stage = theStage;
+        theStage.setTitle("Task List");
+        theStage.setScene(TodoViewWelcomePage.getScene());
+        theStage.show();
+    }
 
     public static Scene getScene()
     {
@@ -35,7 +51,7 @@ public class TodoViewWelcomePage
         welcome.setStyle("-fx-background-color: lightpink");
 
         Text title = new Text("Welcome");
-        Text reminder = new Text("You have 0 unfinished tasks");
+        Text reminder = new Text("You have " + TodoController.getTodo().size() + " unfinished tasks");
 
         reminder.setFont(Font.font("Verdana", FontWeight.NORMAL, 15));
         title.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
@@ -49,6 +65,7 @@ public class TodoViewWelcomePage
             @Override
             public void handle(ActionEvent event)
             {
+                System.out.println(viewBtn.getText());
                 TodoController.switchScenes(viewBtn.getText());
             }
         });
@@ -62,4 +79,6 @@ public class TodoViewWelcomePage
 
         return new Scene(welcome, WIN_WIDTH, WIN_HEIGHT);
     }
+
+
 }

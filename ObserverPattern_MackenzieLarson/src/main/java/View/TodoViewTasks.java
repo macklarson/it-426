@@ -1,6 +1,8 @@
 package View;
 
 import Controller.TodoController;
+import Model.Todo;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -12,7 +14,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -23,6 +29,9 @@ public class TodoViewTasks implements Observer
     private static final int BTN_WIDTH = 50;
     private static final int BTN_HEIGHT = 30;
     public static final int PANEL_PADING = 20;
+
+    private static TodoController controller = new TodoController();
+    private static ArrayList<Todo> todos = controller.getTodo();
 
     public static Scene getScene()
     {
@@ -51,34 +60,33 @@ public class TodoViewTasks implements Observer
             }
         });
 
-//         t odo[] taskList = tasks.getArrayOfTasks();
-//
-//        for (int i = 0; i < taskList.length; i++)
-//        {
-//            CheckBox checkBox = new CheckBox(taskList[i].getTask());
-//            checkBox.setSelected(taskList[i].isChecked());
-//            checkBox.setPadding(new Insets(0,0,0, 20));
-//            final String task = taskList[i].getTask();
-//
-//            checkBox.setOnAction(new EventHandler<ActionEvent>()
-//            {
-//                @Override
-//                public void handle(ActionEvent event)
-//                {
-//                    tasks.changeChecked(task);
-//                }
-//            });
-//
-//            taskBox.getChildren().addAll(checkBox);
-//        }
-
-        CheckBox checkBox1 = new CheckBox("Vacuum");
-        CheckBox checkBox2 = new CheckBox("Shopping");
-        CheckBox checkBox3 = new CheckBox("Walk");
-        CheckBox checkBox4 = new CheckBox("Relax");
-
         tasks.getChildren().addAll(title, addTask);
-        box.getChildren().addAll(tasks, checkBox1, checkBox2, checkBox3, checkBox4);
+        box.getChildren().addAll(tasks);
+
+        if (todos.size() == 0)
+        {
+            Text noTasks = new Text("There are no tasks currently. Add a task by clicking the + button above.");
+            noTasks.setWrappingWidth(250);
+            noTasks.setStyle("-fx-font-size: 15px;");
+            box.getChildren().add(noTasks);
+        }
+        else
+        {
+            for (Todo todo : todos)
+            {
+                CheckBox checkBox = new CheckBox(todo.getTask());
+                box.getChildren().add(checkBox);
+
+                checkBox.setOnAction(new EventHandler<ActionEvent>()
+                {
+                    @Override
+                    public void handle(ActionEvent event)
+                    {
+                        controller.deleteTask(todo.getId());
+                    }
+                });
+            }
+        }
 
         return new Scene(box, WIN_WIDTH, WIN_HEIGHT);
     }
@@ -86,6 +94,9 @@ public class TodoViewTasks implements Observer
     @Override
     public void update(Observable observable, Object argruments)
     {
-
+        todos = (ArrayList<Todo>) argruments;
+        controller.switchScenes("View");
     }
+
+
 }

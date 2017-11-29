@@ -39,6 +39,11 @@ public class Todo
         return message;
     }
 
+    public UUID getId()
+    {
+        return id;
+    }
+
     /**
      * Setter for a task
      *

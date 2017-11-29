@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Todo;
 import Model.TodosModel;
 import View.TodoViewAddTask;
 import View.TodoViewTasks;
@@ -7,19 +8,20 @@ import View.TodoViewWelcomePage;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class TodoController extends Application
+import java.util.ArrayList;
+import java.util.UUID;
+
+public class TodoController
 {
-    private static Stage stage;
+    //private static Stage stage = TodoViewWelcomePage.getStage();
     private static TodosModel todo = new TodosModel();
 
-    public void start(Stage stage)
+    public TodoController()
     {
-        this.stage = stage;
-        stage.setTitle("Task List");
-        stage.setScene(TodoViewWelcomePage.getScene());
-        stage.show();
+        todo.readTasksFromFile();
+        TodoViewTasks viewTasks = new TodoViewTasks();
+        todo.addObserver(viewTasks);
     }
-
     /**
      * This method decides which scene to load based off the button pressed
      *
@@ -29,18 +31,41 @@ public class TodoController extends Application
     {
         switch (buttonName)
         {
-            case "View": stage.setScene(TodoViewTasks.getScene()); break;
+            case "View": TodoViewWelcomePage.getStage().setScene(TodoViewTasks.getScene()); break;
 
-            case "+": stage.setScene(TodoViewAddTask.getScene()); break;
+            case "+": TodoViewWelcomePage.getStage().setScene(TodoViewAddTask.getScene()); break;
 
-            case "Finish": stage.setScene(TodoViewTasks.getScene()); break;
+            case "Finish": TodoViewWelcomePage.getStage().setScene(TodoViewTasks.getScene()); break;
         }
-
-        stage.show();
     }
 
-    public TodosModel getTodo()
+    public static ArrayList<Todo> getTodo()
     {
-        return todo;
+        return todo.getTaskList();
+    }
+
+    public static void addTask(String task)
+    {
+        Todo todoObject = new Todo(task);
+        try
+        {
+            todo.addNewTask(todoObject);
+        }
+        catch (TodosModel.ExistingRecordException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteTask(UUID id)
+    {
+        try
+        {
+            todo.deleteTask(id);
+        }
+        catch (TodosModel.MissingRecordsException exception)
+        {
+            exception.printStackTrace();
+        }
     }
 }
