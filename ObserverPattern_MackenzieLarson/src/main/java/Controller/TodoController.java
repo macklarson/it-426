@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.TodosModel;
 import View.TodoViewAddTask;
 import View.TodoViewTasks;
 import View.TodoViewWelcomePage;
@@ -9,6 +10,7 @@ import javafx.stage.Stage;
 public class TodoController extends Application
 {
     private static Stage stage;
+    private static TodosModel todo = new TodosModel();
 
     public void start(Stage stage)
     {
@@ -30,8 +32,15 @@ public class TodoController extends Application
             case "View": stage.setScene(TodoViewTasks.getScene()); break;
 
             case "+": stage.setScene(TodoViewAddTask.getScene()); break;
+
+            case "Finish": stage.setScene(TodoViewTasks.getScene()); break;
         }
 
         stage.show();
+    }
+
+    public TodosModel getTodo()
+    {
+        return todo;
     }
 }

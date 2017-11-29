@@ -13,7 +13,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class TodoViewTasks
+import java.util.Observable;
+import java.util.Observer;
+
+public class TodoViewTasks implements Observer
 {
     private static final int WIN_WIDTH = 300;
     private static final int WIN_HEIGHT = 300;
@@ -78,5 +81,11 @@ public class TodoViewTasks
         box.getChildren().addAll(tasks, checkBox1, checkBox2, checkBox3, checkBox4);
 
         return new Scene(box, WIN_WIDTH, WIN_HEIGHT);
+    }
+
+    @Override
+    public void update(Observable observable, Object argruments)
+    {
+
     }
 }
