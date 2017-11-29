@@ -88,7 +88,6 @@ public class TodoViewWelcomePage extends Application
             @Override
             public void handle(ActionEvent event)
             {
-                System.out.println(viewBtn.getText());
                 TodoController.switchScenes(viewBtn.getText());
             }
         });
