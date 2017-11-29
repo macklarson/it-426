@@ -1,3 +1,9 @@
+/**
+ * Mackenzie Larson
+ * 11/29/2017
+ * TodoViewAddTask.java
+ */
+
 package View;
 
 import Controller.TodoController;
@@ -13,16 +19,23 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * UI for adding a task
+ */
 public class TodoViewAddTask
 {
     private static final int WIN_WIDTH = 300;
     private static final int WIN_HEIGHT = 300;
     public static final int PANEL_PADING = 10;
-    private static TodosModel task = new TodosModel();
-    private static TextField input = new TextField();
 
+    /**
+     * GUI for adding a new task
+     * @return the scene
+     */
     public static Scene getScene()
     {
         VBox box = new VBox();

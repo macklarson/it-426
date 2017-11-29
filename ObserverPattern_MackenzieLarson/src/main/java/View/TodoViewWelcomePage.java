@@ -1,3 +1,8 @@
+/**
+ * Mackenzie Larson
+ * 11/29/2017
+ * TodoViewWelcomePage.java
+ */
 package View;
 
 import Controller.TodoController;
@@ -16,6 +21,12 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * UI for the welcome page
+ */
 public class TodoViewWelcomePage extends Application
 {
     private static final int WIN_WIDTH = 300;
@@ -25,11 +36,19 @@ public class TodoViewWelcomePage extends Application
     public static Stage stage;
     private TodoController controller;
 
+    /**
+     * initializes the stage
+     * @return stage
+     */
     public static Stage getStage()
     {
         return stage;
     }
 
+    /**
+     * starts up the stage for the scene
+     * @param theStage
+     */
     @Override
     public void start(Stage theStage)
     {
@@ -40,6 +59,10 @@ public class TodoViewWelcomePage extends Application
         theStage.show();
     }
 
+    /**
+     * The UI for the welcome page
+     * @return
+     */
     public static Scene getScene()
     {
         VBox welcome = new VBox();
@@ -79,6 +102,4 @@ public class TodoViewWelcomePage extends Application
 
         return new Scene(welcome, WIN_WIDTH, WIN_HEIGHT);
     }
-
-
 }

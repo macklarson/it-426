@@ -1,8 +1,13 @@
+/**
+ * Mackenzie Larson
+ * 11/29/2017
+ * TodoViewTasks.java
+ */
+
 package View;
 
 import Controller.TodoController;
 import Model.Todo;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -15,13 +20,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * UI for viewing all tasks in the list, checking them off
+ */
 public class TodoViewTasks implements Observer
 {
     private static final int WIN_WIDTH = 300;
@@ -33,6 +41,10 @@ public class TodoViewTasks implements Observer
     private static TodoController controller = new TodoController();
     private static ArrayList<Todo> todos = controller.getTodo();
 
+    /**
+     * the scene for viewing all tasks in the list
+     * @return the scene
+     */
     public static Scene getScene()
     {
         VBox box = new VBox();
@@ -91,12 +103,15 @@ public class TodoViewTasks implements Observer
         return new Scene(box, WIN_WIDTH, WIN_HEIGHT);
     }
 
+    /**
+     * updates UI
+     * @param observable
+     * @param argruments
+     */
     @Override
     public void update(Observable observable, Object argruments)
     {
         todos = (ArrayList<Todo>) argruments;
         controller.switchScenes("View");
     }
-
-
 }

@@ -7,13 +7,9 @@
 package Model;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Observable;
 import java.util.UUID;
-
-import Controller.TodoController;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -21,17 +17,26 @@ import com.google.gson.GsonBuilder;
  * @author Mackenzie Larson
  * @version 1.0
  *
- * Responsible for saving all tasks to disk
+ * Responsible for saving all tasks to file using JSON
  */
 public class TodosModel extends Observable
 {
     private ArrayList<Todo> taskList = new ArrayList<>();
 
+    /**
+     * Gets task list
+     * @return the array of tasks
+     */
     public ArrayList<Todo> getTaskList()
     {
         return taskList;
     }
 
+    /**
+     * Adds a new task
+     * @param task
+     * @throws ExistingRecordException if there are duplicate records
+     */
     public void addNewTask(Todo task) throws ExistingRecordException
     {
         for (int i = 0; i < taskList.size(); i++)
@@ -48,6 +53,12 @@ public class TodosModel extends Observable
         notifyObservers(taskList);
     }
 
+    /**
+     * deletes the task after being checked
+     * @param id id of task
+     * @return true if the id matches
+     * @throws MissingRecordsException
+     */
     public boolean deleteTask(UUID id) throws MissingRecordsException
     {
         for (int i = 0; i < taskList.size(); i++)
@@ -67,6 +78,10 @@ public class TodosModel extends Observable
         throw new MissingRecordsException();
     }
 
+    /**
+     * Writes tasks to file with JSON
+     * @return true when task added to file
+     */
     private boolean writeTasksToFile()
     {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -82,6 +97,9 @@ public class TodosModel extends Observable
         return true;
     }
 
+    /**
+     * Reads tasks from file with JSON
+     */
     public void readTasksFromFile()
     {
         taskList.clear();
@@ -104,6 +122,9 @@ public class TodosModel extends Observable
         }
     }
 
+    /**
+     * Exception for if a record is not found
+     */
     public class MissingRecordsException extends Exception
     {
         @Override
@@ -113,6 +134,9 @@ public class TodosModel extends Observable
         }
     }
 
+    /**
+     * Exception for duplicate records
+     */
     public class ExistingRecordException extends Exception
     {
         @Override
