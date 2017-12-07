@@ -6,6 +6,12 @@ import javafx.scene.paint.Color;
 public interface IShape
 {
     //method chaining
+
+    /**
+     * Sets the thickness of the edge of the shape
+     * @param value number for thickness
+     * @return the shape with the specified thickness
+     */
     public IShape setThickness(double value);
     public IShape setColor(Color value);
     public IShape setFilled(boolean value);
