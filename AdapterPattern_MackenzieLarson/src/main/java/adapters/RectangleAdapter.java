@@ -1,3 +1,8 @@
+/**
+ * Mackenzie Larson
+ * 12/7/2017
+ * RectangleAdapter.java
+ */
 package adapters;
 
 import drawing.IShape;
@@ -5,10 +10,20 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import shapes.Rectangle;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * stores an instance of one of the Rectangle class and implement the IShape interface
+ */
 public class RectangleAdapter implements IShape
 {
     private Rectangle rect;
 
+    /**
+     * Constructor for RectangleAdapter
+     * @param rect
+     */
     public RectangleAdapter(Rectangle rect)
     {
         this.rect = rect;

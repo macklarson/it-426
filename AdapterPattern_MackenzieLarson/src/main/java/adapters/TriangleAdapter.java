@@ -1,15 +1,29 @@
+/**
+ * Mackenzie Larson
+ * 12/7/2017
+ * TriangleAdapter.java
+ */
 package adapters;
 
 import drawing.IShape;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import shapes.Circle;
 import shapes.Triangle;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * stores an instance of one of the Triangle class and implement the IShape interface
+ */
 public class TriangleAdapter implements IShape
 {
     private Triangle triangle;
 
+    /**
+     * Constructor for TriangleAdapter
+     * @param triangle
+     */
     public TriangleAdapter(Triangle triangle)
     {
         this.triangle = triangle;

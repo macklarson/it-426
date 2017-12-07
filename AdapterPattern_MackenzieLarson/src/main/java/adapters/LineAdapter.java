@@ -1,3 +1,8 @@
+/**
+ * Mackenzie Larson
+ * 12/7/2017
+ * LineAdapter.java
+ */
 package adapters;
 
 import drawing.IShape;
@@ -5,10 +10,20 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import shapes.Line;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * stores an instance of one of the Line class and implement the IShape interface
+ */
 public class LineAdapter implements IShape
 {
     private Line line;
 
+    /**
+     * Constructor for LineAdapter
+     * @param line
+     */
     public LineAdapter(Line line)
     {
         this.line = line;

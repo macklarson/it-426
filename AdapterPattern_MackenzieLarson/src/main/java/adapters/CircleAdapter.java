@@ -1,3 +1,8 @@
+/**
+ * Mackenzie Larson
+ * 12/7/2017
+ * CircleAdapter.java
+ */
 package adapters;
 
 import drawing.IShape;
@@ -5,10 +10,20 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import shapes.Circle;
 
+/**
+ * @author Mackenzie Larson
+ * @version 1.0
+ *
+ * stores an instance of one of the Circle class and implement the IShape interface
+ */
 public class CircleAdapter implements IShape
 {
     private Circle circle;
 
+    /**
+     * Constructor for CircleAdapter
+     * @param circle
+     */
     public CircleAdapter(Circle circle)
     {
         this.circle = circle;
